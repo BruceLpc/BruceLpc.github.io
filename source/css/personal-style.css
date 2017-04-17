@@ -1,0 +1,52 @@
+.content.content-post .article-header .post-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+.article-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.article-content a {
+    color: #e67e22;
+}
+figure.highlight{
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 12px;
+	line-height: 1.42857;
+	word-break: break-all;
+	word-wrap: break-word;
+	color: #333;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.highlight .string, .highlight .value, .highlight .variable, .highlight .template-variable, .highlight .strong, .highlight .emphasis, .highlight .quote, .highlight .inheritance, .highlight.ruby .symbol, .highlight.xml .cdata {
+    color: #e96900;
+}
+.item-post .post-title {
+    font-size: 14px;
+}
+@media screen and (max-width: 767px){
+
+	.content.content-post {
+	    padding: 0 10px;
+	}
+}
+
+.highlight .keyword, .highlight .selector-tag, .highlight .type, .highlight.javascript .function {
+    color: #859900;
+}
+.highlight .preprocessor, .highlight .built_in, .highlight .params, .highlight .constant, .highlight .symbol, .highlight .bullet, .highlight .attribute, .highlight.css .hexcolor {
+    color: #859900;
+}
+code, pre, samp {
+    font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+}
+.article-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #292929;
+}
