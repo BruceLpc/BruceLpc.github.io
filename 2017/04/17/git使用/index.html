@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git使用教程 | 嘿，小伙子你要去哪？</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言Git是什么？Git是目前世界上最先进的分布式版本控制系统。能做什么？自动记录文件的改动，生成修改日志，可以回退到每一次修改之前。 git安装从 https://git-for-windows.github.io 下载最新版的git,然后默认选项安装即可。安装完成后，还需要最后一步设置，在命令行输入： git config --global user.name &amp;quot;Your Name&amp;">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git使用教程">
+<meta property="og:url" content="http://lpengcheng.cn/2017/04/17/git使用/index.html">
+<meta property="og:site_name" content="嘿，小伙子你要去哪？">
+<meta property="og:description" content="前言Git是什么？Git是目前世界上最先进的分布式版本控制系统。能做什么？自动记录文件的改动，生成修改日志，可以回退到每一次修改之前。 git安装从 https://git-for-windows.github.io 下载最新版的git,然后默认选项安装即可。安装完成后，还需要最后一步设置，在命令行输入： git config --global user.name &amp;quot;Your Name&amp;">
+<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0">
+<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0">
+<meta property="og:updated_time" content="2017-04-17T02:23:11.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git使用教程">
+<meta name="twitter:description" content="前言Git是什么？Git是目前世界上最先进的分布式版本控制系统。能做什么？自动记录文件的改动，生成修改日志，可以回退到每一次修改之前。 git安装从 https://git-for-windows.github.io 下载最新版的git,然后默认选项安装即可。安装完成后，还需要最后一步设置，在命令行输入： git config --global user.name &amp;quot;Your Name&amp;">
+<meta name="twitter:image" content="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">嘿，小伙子你要去哪？</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">分类</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lpengcheng.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/17/git使用/" class="article-date">
+  <time datetime="2017-04-17T01:50:54.000Z" itemprop="datePublished">2017-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git使用教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Git是什么？<br>Git是目前世界上最先进的分布式版本控制系统。<br>能做什么？<br>自动记录文件的改动，生成修改日志，可以回退到每一次修改之前。</p>
+<h2 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h2><p>从 <a href="https://git-for-windows.github.io" target="_blank" rel="external">https://git-for-windows.github.io</a> 下载最新版的git,然后默认选项安装即可。<br>安装完成后，还需要最后一步设置，在命令行输入：</p>
+<pre><code>git config --global user.name &quot;Your Name&quot;  
+git config --global user.email &quot;email@example.com&quot;
+</code></pre><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>什么是版本库呢？<br>版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</p>
+<pre><code>1. 创建一个空目录
+2. git init 把这个目录变成git可以管理的仓库
+</code></pre><h2 id="把文件提交到版本库"><a href="#把文件提交到版本库" class="headerlink" title="把文件提交到版本库"></a>把文件提交到版本库</h2><p>创建一个readme.txt文件，内容如下：<br>Git is a version control system.<br>Git is free software.</p>
+<pre><code>1. 用命令git add告诉Git，把文件添加到仓库：`git add readme.txt`
+2. 用命令git commit告诉Git，把文件提交到仓库：`git commit -m &quot;wrote a readme file&quot;`
+</code></pre><h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><p>在git中，用HEAD表示当前版本，上一个版本就是HEAD^,上上一个版本就是HEAD^^,如果往上100个版本写100个^比较容易数不过来，所以写成HEAD~10。</p>
+<pre><code>1. 使用git log 命令显示从最近到最远的提交日志
+2. 使用git reset --hard HEAD^  或者git reset --hard 版本号
+3. 使用git reflog查看所有的提交历史
+</code></pre><h2 id="工作区与暂存区"><a href="#工作区与暂存区" class="headerlink" title="工作区与暂存区"></a>工作区与暂存区</h2><p>当我们把文件往Git版本库里添加的时候，是分两步执行的：<br>第一步、用git add把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步、用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+<p>当我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。<br>可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。<br>工作区：git使用的本地目录<br>暂存区：git add提交到的目录</p>
+<p><img src="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0" alt="图解"></p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h5 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h5><p>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。<code>git clone git@github.com:path/repo_name.git</code><br>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</p>
+<h5 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h5><p>关联远程库：<code>git remote add origin git@server-name:path/repo_name.git</code>;<br>关联后，使用命令git push -u origin master第一次推送master分支的所有内容；<br>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p>在实际开发中，我们应该按照几个基本原则进行分支管理：<br>首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；<br>那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；<br>你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了<br><img src="http://www.liaoxuefeng.com/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0" alt="图解"></p>
+<h2 id="bug分支管理"><a href="#bug分支管理" class="headerlink" title="bug分支管理"></a>bug分支管理</h2><p>在软件开发中，bug就像家常便饭一样。有了bug就需要修复，在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。<br>当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，当前正在dev上进行的工作还没有提交.<br>并不是你不想提交，而是工作只进行到一半，还没法提交，预计完成还需1天时间。但是，必须在两个小时内修复该bug，怎么办？<br>幸好，Git还提供了一个stash功能，可以把当前工作现场“暂存”起来，等以后恢复现场后继续工作：</p>
+<pre><code>git stash  暂存工作区
+git stash list 查看 暂存列表
+一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+</code></pre><h2 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h2><pre><code>- 查看分支：git branch
+
+- 创建分支：git branch &lt;name&gt;
+
+- 切换分支：git checkout &lt;name&gt;
+
+- 创建+切换分支：git checkout -b &lt;name&gt;
+
+- 合并某分支到当前分支：git merge &lt;name&gt;
+
+- 删除分支：git branch -d &lt;name&gt;
+</code></pre><h2 id="分支冲突"><a href="#分支冲突" class="headerlink" title="分支冲突"></a>分支冲突</h2><p>在新建分支上修改后提交完，切换到master分支上继续修改完提交，<br>相当于在两个分支上都有了修改，merge时就会提示文件存在冲突。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>任何操作都需要以 git 命令为开头</p>
+<pre><code>本地操作：
+
+git init  初始化一个本地仓库  新建为 master主分支
+git status  查看当前分支状态
+git add  &lt;文件名&gt;   将文件更改添加到分支状态中 相当于文件等待被提交
+git commit -m &lt;&quot;描述信息&quot;&gt;  提交并添加描述信息
+git branch  查看分支   前面带*号的为当前所在分支
+git branch --all 查看所有分支
+git branch &lt;分支名称&gt;  新建分支
+git checkout -b &lt;分支名&gt;  新建分支并切换到此分支
+git checkout &lt;分支名&gt;  切换分支
+git merge &lt;分支名&gt;   将指定分支名合并到当前分支  一般为切换到主分支使用此命令
+git merge --no-ff -m &quot;提交描述&quot; &lt;分支名&gt;   合并分支并提交
+git branch -D &lt;分支名&gt;  强制删除分支，不管分支是否有未提交合并的代码
+
+git tag 查看所有标签
+git tag &lt;标签名&gt; 在当前状态下新建一个标签，可用来当作版本号使用
+git tag -a &lt;标签名称&gt; -m &lt;&quot;标签描述&quot;&gt; &lt;提交id&gt;  在指定的提交状态下新建一个标签
+git show &lt;标签名称&gt;   查看标签的详情
+git tag -d &lt;标签名&gt; 删除标签
+git push origin &lt;标签名&gt;   推送标签到远程仓库
+git push origin --tags  推送所有未推送的标签
+git push origin :refs/tags/&lt;标签名&gt;   删除远程标签，本地要先删除后才可以
+
+
+git checkout &lt;标签名&gt; 切换到标签名指定的状态
+git diff &lt;文件名&gt; 查看文件修改内容
+
+git log      查看提交日志   --pretty=oneline  此参数减少输出信息  穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+git reflog   要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+git log --graph --pretty=oneline --abbrev-commit   查看分支合并图
+git reset --hard &lt;HEAD^||提交ID&gt; 穿梭到指定提交版本
+HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+
+git checkout -- &lt;文件名&gt;  将指定的文件恢复到最近一次 commit或add操作时候的状态
+git reset HEAD &lt;文件名&gt;   将指定的文件从暂存区的修改撤销掉（unstage），重新放回工作区
+git rm &lt;文件名&gt;         删除指定的文件
+
+git stash  把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+git stash list 查看暂存状态
+git stash apply 恢复暂存状态
+git stash drop  删除暂存状态
+git stash pop   恢复并删除暂存状态
+git stash apply &lt;stash@{0}&gt;  恢复指定的暂存状态
+
+远征仓库操作:
+git clone &lt;远程地址&gt;  从远征仓库拷贝过来代码，相当于建立本地分支
+git pull 将最新的提交从远程仓库抓取下来
+如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to=origin/master
+git push  将本地修改后的代码提交到远程仓库
+git push &lt;远程仓库名，默认origin&gt; &lt;本地分支名&gt;  将指定的分支推送到远程分支上
+
+git push origin :dev 删除远程仓库dev分支
+git remote -v 查看远程仓库  -v 为详细信息
+git checkout -b dev origin/dev 创建分支dev 并与远程dev分支关联起来
+git checkout -b &lt;本地支分支名&gt; &lt;远程仓库名，默认origin&gt;/&lt;远程支分支名&gt; 拉取远程主分支下的支分支。。。
+git branch --set-upstream &lt;本地支分支名&gt; &lt;远程仓库名，默认origin&gt;/&lt;远程支分支名&gt;  将本地分支与远程指定的分支关联起来
+
+//以下为先有本地库，再建立远程库操作所用的命令
+git remote add origin &lt;URL地址&gt; 本地库与远征库关联
+git push -u origin master 关联后，使用命令第一次推送master分支的所有内容，   -u参数为推送当前分支所有内容
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Git虽然极其强大，命令繁多，但常用的就那么十来个，掌握好这十几个常用命令，已经可以得心应手地使用Git了。    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lpengcheng.cn/2017/04/17/git使用/" data-id="cj1li9mgr0002o0uq5k8gbgbz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/14/前端自动化Gulp实际使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          前端自动化Gulp实际使用
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-pages/">github pages</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/17/git使用/">git使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/14/前端自动化Gulp实际使用/">前端自动化Gulp实际使用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/17/ajax详解/">ajax 详解</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/01/状态模式/">设计模式-状态模式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/21/github-pages初体验/">Github-Pages初体验</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Green<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">分类</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
